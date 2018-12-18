@@ -56,4 +56,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Quotes are currently being pulled from [Programming Quotes API for Storm Consultancy](http://quotes.stormconsultancy.co.uk/api)
+* Quotes are currently being pulled from [Programming Quotes API by Storm Consultancy](http://quotes.stormconsultancy.co.uk/api)
