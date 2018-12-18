@@ -22,15 +22,30 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
+def get_next_tweet():
+    try:
+        file_name = open("tweets_posted.txt", "r")
+        id = file_name.read()
+        next_id = int(id)+1
+        file_name = open("tweets_posted.txt", "w")
+        file_name.write(str(next_id))
+        print(f'Next tweet id: {next_id}')
+        return next_id
+    except IOError:
+        print("File not found or path is incorrect")
+    finally:
+        file_name.close()
 
+    
+    
 def getQuote():
-    api_quote = requests.get('http://quotes.stormconsultancy.co.uk/random.json').json()
-    api_quote_id = api_quote["id"]
+    id = get_next_tweet()
+    api_quote = requests.get(f'http://quotes.stormconsultancy.co.uk/quotes/{id}.json').json()
     api_quote_author = api_quote["author"]
     api_quote_text = api_quote["quote"]
     post = f'{api_quote_text} - {api_quote_author}'
     return post
-
+    
 def tweet(post):
     api.update_status(post)
     print(f'Post tweeted:\n{post}')
