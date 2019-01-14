@@ -12,7 +12,7 @@ cd dev-twitter-bot
 
 Create a new virtual environment
 ```
-python3 -m venv tutorial-env
+python3 -m venv myenv
 ```
 
 OR (with Anaconda)
