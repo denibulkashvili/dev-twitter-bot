@@ -1,5 +1,5 @@
 # dev-twitter-bot
-Twitter bot that posts inspirational quotes for developers
+Twitter bot that posts inspirational quotes for developers. Read my [blog post](http://bulkashvili.com/post/Twitter%20Bot%20with%20Python%20From%20Scratch/) on how to create on from scratch.
 
 ## Getting Started
 
