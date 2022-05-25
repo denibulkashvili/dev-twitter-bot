@@ -17,7 +17,7 @@ MarkupSafe==1.1.0
 mccabe==0.6.1
 oauthlib==2.1.0
 pycparser==2.19
-PyJWT==1.6.4
+PyJWT==2.4.0
 pylint==2.2.2
 pyOpenSSL==18.0.0
 PySocks==1.6.8
